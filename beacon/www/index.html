@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src * ; connect-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+	<div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>Left panel content goes here</p>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">Awesome App</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block">
+                            <p>Page content goes here</p>
+							<div class="my-page" id="page-default">
+								<div class="my-header">
+									<img class="my-header-image" src="photos/photo-default.jpg" />
+									<img class="my-icon-back" src="icon-back.png" ontouchend="history.back()" />
+								</div>
+								<div class="my-content">
+									<h1>Relaxation iBeacons</h1>
+									<p id="txtt" >Please move within range of the Relaxation iBeacons.</p>
+								</div>
+								</div>
+
+								<div class="my-page" id="page-feet">
+									<div class="my-header">
+										<img class="my-header-image" src="photos/photo-feet.jpg" />
+										<img class="my-icon-back" src="icon-back.png" ontouchend="history.back()" />
+									</div>
+									<div class="my-content">
+										<h1>Feel Your Feet</h1>
+										<ul>
+											<li>Stand on your feet.</li>
+											<li>Experience the contact with the ground.</li>
+											<li>Feel into the soles of the feet.</li>
+											<li>Feel the knees.</li>
+											<li>The hips.</li>
+											<li>The spine.</li>
+											<li>Shoulders.</li>
+											<li>Neck.</li>
+											<li>Head.</li>
+											<li>Feel the connection between the top of the head and the feet.</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="my-page" id="page-shoulders">
+									<div class="my-header">
+										<img class="my-header-image" src="photos/photo-shoulders-1.jpg" />
+										<img class="my-icon-back" src="icon-back.png" ontouchend="history.back()" />
+									</div>
+									<div class="my-content">
+										<h1>Feel Your Shoulders</h1>
+										<ul>
+											<li>Let your arms hang loose.</li>
+											<li>Become aware of the shoulders.</li>
+											<li>Slightly lift one shoulder and release it.</li>
+											<li>Let the shoulder come all the way down.</li>
+											<li>Lift the other shoulder and release it.</li>
+											<li>Alternate three more times on each side.</li>
+											<li>Experience the breath flowing in and out of the body.</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="my-page" id="page-face">
+									<div class="my-header">
+										<img class="my-header-image" src="photos/photo-face.jpg" />
+										<img class="my-icon-back" src="icon-back.png" ontouchend="history.back()" />
+									</div>
+									<div class="my-content">
+										<h1>Feel Your Face</h1>
+										<ul>
+											<li>Become aware of your face.</li>
+											<li>Feel the forehead.</li>
+											<li>The eyebrows.</li>
+											<li>Eyes.</li>
+											<li>Nose.</li>
+											<li>Nostrils.</li>
+											<li>Air flowing through the nostrils.</li>
+											<li>Cheeks.</li>
+											<li>Jaw.</li>
+											<li>Lips.</li>
+											<li>Tongue.</li>
+											<li>Whole of the head.</li>
+											<li>The space surrounding the head.</li>
+										</ul>
+									</div>
+								</div>
+                            <!-- Link to another page -->
+                            <a href="about.html">About app</a>
+				<button id='btt'>TEST</button>
+				<label id='lb_t'>HELLO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="about.html" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	----------
+<script src="lib/jquery.js"></script>
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+	
+	<script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+{
+  "uuid": "5c5e93a2-36f4-45df-8155-5425e9bf580f",
+  "plugins": [],
+  "name": "www",
+  "title": "My App",
+  "description": "App oneline description.",
+  "long-description": "App long description.",
+  "version": "",
+  "author-name": "Evothings",
+  "author-email": "build@evothings.com",
+  "author-url": "https://evothings.com",
+  "cordova-id": "com.evothings.samples.www"
+}
